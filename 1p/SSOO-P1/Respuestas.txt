@@ -7,3 +7,9 @@ collect2: error: ld returned 1 exit status
 Diu que no estan definits dues funcions "undefined", que son justament les que són incloses al calculator.c.
 Dona un error de funcions no definides.
 Aquest error és degut a que ara ja no tenim l'executable de les funcions. Perquè com que no em afegit el *.o, el codi del *.c no hi te accés.
+
+
+
+Pegunta 5.b.
+
+trivial... no veig el dubte

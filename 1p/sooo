@@ -2,3 +2,16 @@ Tot comença a la pàgina 2
 
 Pàgina 4
 Llibreries estàtiques "lib*..*.a"
+compilar
+>> ar arcs libname.a *.o
+executable
+>> gcc *.o -o myprog libname.a
+
+Final pàgina 4
+Llibreries dinàmiques "lib*..*.so"
+Generar objetos con -fPIC
+>> gcc -c -fPIC *.c
+Generar libreria
+>> gcc -shared -o libname.so *.o
+executable
+>> gcc *.o -o myprog libname.so

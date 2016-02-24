@@ -1,5 +1,3 @@
-
-
 # typing 'make' will invoke the first target entry in the file 
 # (in this case the default target entry)
 
