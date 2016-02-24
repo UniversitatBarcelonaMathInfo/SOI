@@ -1,0 +1,10 @@
+# sortides del c
+*.o
+
+# binary vim exit
+*.swp
+
+
+# demana la practica 1
+myprog
+myprog2
