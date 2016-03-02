@@ -1,0 +1,66 @@
+bash, elimina el historial? SI
+
+Canviar el que surt al bash
+~/.bashrc
+~/.profile
+
+$ usuari
+# super usuari (root)
+
+bash
+;	mes duna comanda per linia
+&	background -C-z-
+
+hostname
+hostnamectl
+who
+
+no pillo...
+man -k key
+man -k java -> per descobrir el compilador o debugger
+
+directori
+~/
+$HOME
+
+pwd
+
+Variables locals
+[A-z]+_=
+
+Variables entorno
+HOME
+USER
+PATH
+SHELL
+
+Condicions
+if [ condition ]
+then
+	...
+ifel
+	...
+else
+	...
+fi
+
+Aritmetic
+bash	C
+-eq	==
+-ne	!=
+-lt	<
+-le	<=
+-gt	>
+-ge	>=
+
+String
+s = r	Mateix walor
+s != r	Diferent walor
+s	( No difinit ) O ( no NULL )
+-n s	Existeix, no NULL
+-z s	Existeix, NULL
+
+Logic
+!	Not
+-a &&	AND
+-o ||	OR
