@@ -1,0 +1,31 @@
+history
+
+!\d respecte history
+!\c
+
+host
+hostname
+hostnamectl
+
+eliminar job
+kill %\d
+
+posar-lo a sleep directament
+<<ordre>> &
+
+
+top
+Tot el que executa
+
+
+mkdir -p new/new/new/new
+
+
+eloi=1234
+sleep $eloi
+
+Testeixar en C
+p = NULL;
+if ( (p) && (*p==3))
+
+echo $?
