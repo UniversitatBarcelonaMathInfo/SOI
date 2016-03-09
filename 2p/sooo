@@ -29,3 +29,20 @@ p = NULL;
 if ( (p) && (*p==3))
 
 echo $?
+
+Ejemplo 13
+
+Els condicionals, true〓0, false ‡ 0
+
+
+Comanda echo
+	' ' literal
+	" " interpreta com un printf
+
+cat
+head
+tail
+-Jo, sed, per llegir linies concretes
+
+Propietari	Usuaris del grup	a la resta
+rwx		rwx			rwx
