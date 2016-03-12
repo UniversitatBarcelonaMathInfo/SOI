@@ -9,7 +9,9 @@ $ usuari
 
 bash
 ;	mes duna comanda per linia
-&	background -C-z-
+&	background -C-z- // fg // bg equiv jobs // 
+'?'	caracter qualsevol
+[a,b]	Llista de possiblitats
 
 hostname
 hostnamectl
@@ -22,20 +24,43 @@ man -k java -> per descobrir el compilador o debugger
 directori
 ~/
 $HOME
+/bin	?? Execusio restringida
+/boot	Kernel + arranque
+/dev	Mon extern
+/etc	Configuracio
+/home	Usuari/s
+/lib	?? llibreries i altres moduls
+/proc	?? lloc per intenrcanviar fitxers
+/root	Usuari root, administrador
+/sbin	programes reservats per a root
+/tmp	Arxius temporals
+/usr	Programes accesibles a tots els usuaris
+/var	?? Arxius modificats per altres programes
 
 pwd
+mkdir
+rmdir
 
 Variables locals
-[A-z]+_=
+[A-z,_,0-9]
+	NULL
+	var=
+	var=""
+	?? var=NULL
+Certs casos necessari:
+	define
+	let
+	expr
 
 Variables entorno
 HOME
 USER
 PATH
 SHELL
+...
 
 Condicions
-if [ condition ]
+if [ condition ] on 0 es true
 then
 	...
 ifel
@@ -60,7 +85,57 @@ s	( No difinit ) O ( no NULL )
 -n s	Existeix, no NULL
 -z s	Existeix, NULL
 
+${#s} = len s
+${s:5} = s + 5 (en C)
+${s:5:2} = s + 5 i nomes els 2 seguents caracters
+	eliminar
+${s#pattern}	curt, pel principi	pattern := string*string
+${s##pattern}	llarg, pel principi
+${s%pattern}	Equiv, final
+${s%%pattern} 
+
+Entrada
+$#	Nombre total d'entrada
+$@	Entrada total = $1 + $2 + ...
+$0	nom com s'ha cridat
+$\d	entrada del que se desitji
+
+Fitxers
+-s	fitxer no buit
+-f	fitxer existeix
+-d	es directori
+-w	tinc permisos d'escriptura
+-r	tinc permisos de lectura
+-x	tinc permisos d'execucio
+
 Logic
 !	Not
 -a &&	AND
 -o ||	OR
+
+Bucles
+List = {1..10}, 1 2 3 4 5 6 7 8, 
+for var in list
+do
+	source
+done
+--
+for (( declare; end; next ))
+--
+while [ condicio ]
+do
+	source
+done
+
+echo
+====
+echo "$a" printf
+diferent
+echo '$a' literal
+
+comandes
+cat
+head
+tail
+
+Permisos
