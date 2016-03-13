@@ -14,14 +14,15 @@ then
 fi
 
 # 4t crear test{3..6} i dins d'ells subtest{2..8}
-for i in {3..6}
-do
-	mkdir test$i
-	for j in {2..8}
-	do
-		mkdir test$i/subtest$j
-	done
-done
+#for i in {3..6}
+#do
+#	mkdir test$i
+#	for j in {2..8}
+#	do
+#		mkdir test$i/subtest$j
+#	done
+#done
+mkdir -p test{3..6}/subtest{2..8}
 
 # Prep 5
 mkdir test1 test2

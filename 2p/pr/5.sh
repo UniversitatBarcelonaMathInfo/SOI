@@ -20,7 +20,7 @@ while [ "$s" != "$t" ]
 do
 	s=${t%%,*?}
 	t=${t#?*,}
-	for i in {1..6}
+	for ((i=0; i < $2; i++))
 	do
 		echo -n "$s "
 	done

@@ -12,5 +12,5 @@ echo
 echo 4: Fitxer integer, mostrar dividit 7
 for i in $(cat integers)
 do
-	echo "$i / 7 = $(expr $i / 7)"
+	echo "$(expr $i / 7)"
 done
