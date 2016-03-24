@@ -10,8 +10,7 @@ Arnau Sistach Reinoso
 .AI
 Entrega de la pr\(`actica 2
 .AB
-Un cop llegit el pdf, on tamb\('e em fet tots els exemples i exercicis. Ara podem fer sense masses dificultats la entrega
-en format pdf com \('es demanat a l'enunciat.
+Despr\('es d'haver llegit el document de la pr\(`actica 2 i d'haver dut a terme els exercicis, podem fer l'entrega de la pr\(`atica 2 en format pdf, tal com ho precisa la consigna.
 .AE
 
 .NH
@@ -20,14 +19,18 @@ Problema: Treballar amb fitxers.
 Edici\('o i creaci\('o de fitxers.
 .NH 2
 Crea el directori problema2.
+.LP
+Existeix un programa per a crear carpetes: mkdir
 .IP
 mkdir problema2
 .NH 2
 Entra en ell.
+.LP
+Per entrar en un fitxer, el programa \('es: cd
 .IP
 cd problema2
 .NH 2
-Crea el directori test si no existeix el directori foo.
+Crea el directori test si no existeix el fitxer foo.
 .LP
 Comprova la no existeincia del fitxer foo amb [ ! -f foo ].
 .IP
@@ -49,21 +52,27 @@ mkdir -p test{3..6}/subtest{2..8}
 
 \" part 1.5
 .NH 2
-Copia tots els fitxers de test1 d'extensi\('o c al directori test2.
+Copia tots els fitxers de test1 d'extenci\('o c al directori test2.
 .LP
-Realment l'enunciat diu que imaginis que dins de test1 hi ha uns fitxers. De fet, si seguim el patro l\(`ogic de creaci\('o fins ara, obtenim que aix\(`o \('es impossible ja que no existeix el test1 i tampoc existeix el test2. Aix\('i que imagino i aqu\('i est\(`a la meva resposta.
+Copiem tot amb el programa cd. Tots els que tinguin extenci\('o c s\('on aquells que acaben el nom per ".c", llavors els tindrem amb "*.c".
+.br
+Suposem l'exist\(`encia d'aquests directoris, dona com a resultat:
 .IP
 cp test1/*.c test2
 
 \" part 1.6
 .NH 2
 Canvia el nom del test2/main.c per test2/newmain.cpp.
+.LP
+El programa mv, pot moure de lloc i canviar de nom.
 .IP
 mv test2/main.c test2/newmain.cpp
 
 \" part 1.7
 .NH 2
 Elimina tots els fitxers d'extenci\('o h del test1.
+.LP
+Hi ha el programa "rm" per a eliminar, i seleccionar tots els d'extenci\('o h s\('on els que acaben en ".h", tenim acc\('es a tots ells gr\(`acies a "*.h".
 .IP
 rm test1/*.h
 
@@ -80,57 +89,69 @@ rm test5 -r
 .NH 2
 Mostra el contingut de tots els directoris continguts en el directori actual.
 .LP
-Per ls, tenim ls facilitat -R per entrar dins dels directoris de forma recursiva.
-Per\(`o no he sapigut fer que nom\('es mostres els directoris.
+El programa "echo" mostra tot el que entres. Si entres el directoris continguts en el directori actual ja ho tenim fet.
+.br
+Sabem que en linux, el separador de fitxers \('es "\\", llavors tots els directoris en el directori actual s\('on els que compleixen que acaben amb "\\". Aix\('i obtenim que s\('on els "*\\".
 .IP
-for i in $(ls)
-.IP
-do
-.IP
-	if [ -d $i ]
-.IP
-	then
-.IP
-		for j in $(ls $i)
-.IP
-		do
-.IP
-			if [ -d $i/$j ]
-.IP
-			then
-.IP
-				echo "$i/$j"
-.IP
-			fi
-.IP
-		done
-.IP
-	fi
-.IP
-done
+echo */
+\".IP
+\"for i in $(ls)
+\".IP
+\"do
+\".IP
+\"	if [ -d $i ]
+\".IP
+\"	then
+\".IP
+\"		for j in $(ls $i)
+\".IP
+\"		do
+\".IP
+\"			if [ -d $i/$j ]
+\".IP
+\"			then
+\".IP
+\"				echo "$i/$j"
+\".IP
+\"			fi
+\".IP
+\"		done
+\".IP
+\"	fi
+\".IP
+\"done
 
 \" part 2
 .NH
 Problema: I/O
 .NH 2
 Imprimeix el cam\('i absolut del usuari.
+.LP
+Tenim definida per defecte la variable "$HOME" que te el cam\('i absolut del usuari. I "echo" \('es el programa que mostra el que entres.
 .IP
 echo $HOME
 
+\"2.2
 .NH 2
 Mostrar el contingut de kk enumerat per l\('inies.
+.LP
+Tenim el programa "cat" per mostrar el que vols, i amb el flag "-n" enumera les l\('inies.
 .IP
 cat kk -n
 
 .NH 2
 Mostrar les 6 primeres l\('inies dels fitxers kk1 i kk2.
+.LP
+El programa "head" mostra les primeres l\('inies dels fitxers. Amb el flag "-n <int>" selecciones quantes l\('inies vols mostrar.
 .IP
 head kk{1,2} -n 6
 
 .NH 2
 Llegeix el fitxer integers i imprimeix el valor dividit per 7.
 .LP
-Se suposa que el fitxer nom\('es cont\('e nombres enters.
+Se suposa que el fitxer nom\('es cont\('e nombres enters. Tenim el programa "cat" per a mostrar el contingut, el "for" per recorre element per element, "expr" per a fer la divisi\('o i finalment "echo" per a mostrar el resultat.
+.br
+Al final d'usar tants programes diferents coordinats entre ells obtenim el resultat desitjat.
 .IP
 for i in $(cat integers)
 .IP
@@ -148,7 +169,7 @@ Afegir el permis de lectura al propietari i usuaris no registrats.
 .br
 Eliminar el permis d'escriptura als usuaris no registrats.
 .br
-Nom\('es el permis d'execuci\('o pel grup.
+Nom\('es el permis d'execuci\('o pel grup. Sense modificar la resta.
 .br
 Tot aix\(`o pel fitxer foo.
 .IP

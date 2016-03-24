@@ -57,3 +57,12 @@ do
 		done
 	fi
 done
+
+#
+for i in $(ls -d */)
+do
+	ls -d $i*/
+done
+
+echo 'aqui ens semparem'
+ls */*/ -d
