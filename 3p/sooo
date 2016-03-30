@@ -6,3 +6,46 @@ write (2,...)	2	sortida d'error -> pantalla
 
 Dubte meu sobre el copy past
 https://en.wikipedia.org/wiki/Cut,_copy,_and_paste
+
+
+
+
+Classe room
+ls
+ls > exit
+ls >> exit ( suma al que ja estava )
+
+error
+ls 2> exit
+ls 2>> exit
+
+
+Cnt-D \equiv ``End-Of-File'' -> EOF
+
+ps
+ps aux
+
+find . -type f -name "*.c"
+	-type /f/d/
+	-perm 776
+	-name "str"
+		-exec rm {} \;
+	-print
+	-mmin /+60/-60/
+	-size /+10/
+
+sort -nk3
+tail -n +2
+
+
+ grep
+egrep
+fgrep
+
+	-v NO hi ha concidencia
+	-l Nomes el nom quan hi ha concidencia
+
+	'[coses]'
+	'[a-q]'
+	'a*b'
+	'^d.*lo' ^ init is 'd', . always * n times lo
