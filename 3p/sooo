@@ -49,3 +49,11 @@ fgrep
 	'[a-q]'
 	'a*b'
 	'^d.*lo' ^ init is 'd', . always * n times lo
+	'\b hola \b', ho detecta com si fos un espai en blanc??? una paraula separada ;)
+
+sed
+	's/lo/la/' fitxer
+	'&', el que hi havia el guarda en aquesta variable
+	-e per a fer multiples substitucions
+
+awk		Es un llenguatge propi, te dret propi a tenir el seu nom :)
