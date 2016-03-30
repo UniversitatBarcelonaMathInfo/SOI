@@ -1,0 +1,8 @@
+		fd
+		0	entrada
+write (1,...)	1	sortida est. (printf)
+write (2,...)	2	sortida d'error -> pantalla
+
+
+Dubte meu sobre el copy past
+https://en.wikipedia.org/wiki/Cut,_copy,_and_paste
